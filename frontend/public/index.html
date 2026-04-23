@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SmartRelief — Distribution System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body, #root { height: 100%; width: 100%; overflow: hidden; }
+      body { font-family: 'DM Sans', sans-serif; background: #0a1128; }
+      /* Leaflet z-index fix inside dark layout */
+      .leaflet-container { border-radius: 12px; }
+      .leaflet-popup-content-wrapper {
+        background: #1e293b; color: #e2e8f0; border-radius: 10px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+      }
+      .leaflet-popup-tip { background: #1e293b; }
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: #334155; border-radius: 99px; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
