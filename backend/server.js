@@ -7,7 +7,7 @@ require('dotenv').config();
 const app = express();
 
 // ── Middleware ──────────────────────────────────────────────────────────────
-app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
+app.use(cors());
 app.use(express.json());
 
 // ── Routes ──────────────────────────────────────────────────────────────────
@@ -31,6 +31,6 @@ mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
     console.log('✅ MongoDB connected');
-    app.listen(PORT, () => console.log(`🚀 Server → http://localhost:${PORT}`));
+    app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
   })
   .catch(err => { console.error('❌ DB Error:', err.message); process.exit(1); });
